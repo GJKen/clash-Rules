@@ -1,8 +1,8 @@
 payload:
-  - DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
-  - DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
-  - DOMAIN-SUFFIX,hub5pn.wap.sandai.net
-  - DOMAIN-SUFFIX,hub5pnc.sandai.net
-  - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
-  - DOMAIN-SUFFIX,hubciddata.sandai.net
-  - DOMAIN-SUFFIX,mypikpak.com
+  - DOMAIN-SUFFIX,dlandroid.rcv.sandai.net,PikPka
+  - DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net,PikPka
+  - DOMAIN-SUFFIX,hub5pn.wap.sandai.net,PikPka
+  - DOMAIN-SUFFIX,hub5pnc.sandai.net,PikPka
+  - DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net,PikPka
+  - DOMAIN-SUFFIX,hubciddata.sandai.net,PikPka
+  - DOMAIN-SUFFIX,mypikpak.com,PikPka
