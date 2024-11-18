@@ -42,7 +42,7 @@ function overwriteRules(params) {
         "RULE-SET,lancidr,DIRECT",
         "GEOIP,LAN,DIRECT,no-resolve",
         "GEOIP,CN,DIRECT,no-resolve",
-        //"RULE-SET,applications,DIRECT",
+        "RULE-SET,applications,应用程序代理",
         "RULE-SET,openai,ChatGPT",
         "RULE-SET,telegramcidr,电报消息,no-resolve",
         "RULE-SET,pikpakdrive,PikPak",
@@ -165,14 +165,14 @@ function overwriteRules(params) {
             url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt",
             path: "./ruleset/lancidr.yaml",
             interval: 86400,
+        },
+        applications: {
+           type: "http",
+           behavior: "classical",
+           url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt",
+           path: "./custom/applications.yaml",
+           interval: 86400,
         }
-        //applications: {
-        //   type: "http",
-        //   behavior: "classical",
-        //   url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt",
-        //   path: "./ruleset/applications.yaml",
-        //   interval: 86400,
-        //},
     };
 
     params["rule-providers"] = ruleProviders;
@@ -252,6 +252,56 @@ function overwriteProxyGroups(params) {
             proxies: ["ALL-自动选择"],
         },
         {
+            name: "ALL-自动选择",
+            type: "url-test",
+            url: "http://www.gstatic.com/generate_204",
+            interval: 300,
+            tolerance: 50,
+            proxies: allProxies,
+            hidden: true,
+        },
+        {
+            name: "自定义代理组1",
+            type: "select",
+            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
+            "include-all": true,
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
+        },
+        {
+            name: "PikPak",
+            type: "select",
+            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
+            // "include-all": true,
+            icon: "https://cdn.img2ipfs.com/ipfs/QmSu1K5Hqm5kuvtRypFnbwFEpfuzXuswQi18qmYJyVahpy"
+        },
+        {
+            name: "ChatGPT",
+            type: "select",
+            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
+            // "include-all": true,
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
+        },
+        {
+            name: "电报消息",
+            type: "select",
+            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
+            // "include-all": true,
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
+        },
+        {
+            name: "Google",
+            type: "select",
+            proxies: [proxyName, "手动选择", "Google-自动选择", "US-自动选择", "JP-自动选择", "SG-自动选择"],
+            icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
+        },
+        {
+            name: "应用程序代理",
+            type: "select",
+            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
+            // "include-all": true,
+            icon: "https://cdn.img2ipfs.com/ipfs/QmSryYFqXaSDUioMU7f4dHfhxPNfsokXsCZYsvga2bLtsn"
+        },
+        {
             name: "负载均衡(散列)",
             type: "load-balance",
             url: "http://www.gstatic.com/generate_204",
@@ -272,49 +322,6 @@ function overwriteProxyGroups(params) {
             strategy: "round-robin",
             lazy: true,
             proxies: allProxies,
-        },
-        {
-            name: "ALL-自动选择",
-            type: "url-test",
-            url: "http://www.gstatic.com/generate_204",
-            interval: 300,
-            tolerance: 50,
-            proxies: allProxies,
-            hidden: true,
-        },
-        {
-            name: "自定义代理组1",
-            type: "select",
-            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            "include-all": true,
-            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
-        },
-        {
-            name: "电报消息",
-            type: "select",
-            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
-            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
-        },
-        {
-            name: "PikPak",
-            type: "select",
-            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
-            icon: "https://cdn.img2ipfs.com/ipfs/QmSu1K5Hqm5kuvtRypFnbwFEpfuzXuswQi18qmYJyVahpy"
-        },
-        {
-            name: "ChatGPT",
-            type: "select",
-            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
-            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
-        },
-        {
-            name: "Google",
-            type: "select",
-            proxies: [proxyName, "手动选择", "Google-自动选择", "US-自动选择", "JP-自动选择", "SG-自动选择"],
-            icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
         },
         {
             name: "漏网之鱼",
