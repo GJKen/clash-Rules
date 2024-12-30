@@ -15,22 +15,28 @@ function overwriteRules(params) {
         //"DOMAIN-SUFFIX,linux.do," + proxyName,
         // 示例2 ：使用 自定义代理组1
         //"DOMAIN-SUFFIX,gstatic.com,自定义代理组1",
-        // 示例3 ：使用 自定义代理组2
-        //"DOMAIN-SUFFIX,googleapis.com,自定义代理组2",
-        "DOMAIN-SUFFIX,google.com," + proxyName,
-        "DOMAIN-SUFFIX,googleapis.com," + proxyName,
-        "DOMAIN-SUFFIX,gstatic.com," + proxyName,
         "DOMAIN-SUFFIX,gjkalist.us.kg,DIRECT",
         "DOMAIN-SUFFIX,gjkblog.us.kg,DIRECT",
+        "DOMAIN-SUFFIX,jsdelivr.net,DIRECT",
         "DOMAIN-SUFFIX,liaoth.com,DIRECT",
-        "DOMAIN-SUFFIX,gemini.gptnb.xyz," + proxyName,
-        "DOMAIN-SUFFIX,app.img2ipfs.org," + proxyName,
+        "DOMAIN-SUFFIX,img2ipfs.org,DIRECT",
+        "DOMAIN-SUFFIX,cdn.ipfsscan.io,DIRECT",
+        "DOMAIN-SUFFIX,codepen.io,DIRECT",
+        "DOMAIN-SUFFIX,codesandbox.io,DIRECT",
+        "DOMAIN-SUFFIX,serv00.net," + proxyName,
+        "DOMAIN-SUFFIX,gstatic.com," + proxyName,
         "DOMAIN-SUFFIX,saber.love," + proxyName,
         "DOMAIN-SUFFIX,naixi.net," + proxyName,
+        "DOMAIN-SUFFIX,wiki.metacubex.one," + proxyName,
+        "DOMAIN-SUFFIX,serv00.com," + proxyName,
+        "DOMAIN-SUFFIX,musicbrainz.org," + proxyName,
+        "DOMAIN-SUFFIX,metabrainz.org," + proxyName,
+        "DOMAIN-SUFFIX,pagead2.googlesyndication.com,自定义代理组1",
+        "DOMAIN-SUFFIX,utt.impactcdn.com,自定义代理组1",
+        "DOMAIN-SUFFIX,fonts.googleapis.com,自定义代理组1",
         "DOMAIN-SUFFIX,fanart.tv,自定义代理组1",
         "DOMAIN-SUFFIX,bangumi.tv,自定义代理组1",
-        "DOMAIN-SUFFIX,bgm.tv,自定义代理组1",
-        "DOMAIN-SUFFIX,serv00.com," + proxyName
+        "DOMAIN-SUFFIX,bgm.tv,自定义代理组1"
     ];
 
     const rules = [
@@ -43,11 +49,11 @@ function overwriteRules(params) {
         "GEOIP,LAN,DIRECT,no-resolve",
         "GEOIP,CN,DIRECT,no-resolve",
         "RULE-SET,applications,应用程序代理",
-        "RULE-SET,openai,ChatGPT",
+        "RULE-SET,chatai,ChatGPT",
         "RULE-SET,telegramcidr,电报消息,no-resolve",
         "RULE-SET,pikpakdrive,PikPak",
+        "RULE-SET,Pic-Hub,PicHub",
         "RULE-SET,tld-not-cn," + proxyName,
-        "RULE-SET,google,Google",
         "RULE-SET,icloud," + proxyName,
         "RULE-SET,apple," + proxyName,
         "RULE-SET,gfw," + proxyName,
@@ -78,13 +84,6 @@ function overwriteRules(params) {
             path: "./ruleset/apple.yaml",
             interval: 86400,
         },
-        google: {
-            type: "http",
-            behavior: "domain",
-            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
-            path: "./ruleset/google.yaml",
-            interval: 86400,
-        },
         proxy: {
             type: "http",
             behavior: "domain",
@@ -92,23 +91,23 @@ function overwriteRules(params) {
             path: "./ruleset/proxy.yaml",
             interval: 86400,
         },
-        openai: {
+        chatai: {
             type: "http",
             behavior: "classical",
-            url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml",
-            path: "./ruleset/custom/openai.yaml"
-        },
-        telegramcidr: {
-            type: "http",
-            behavior: "ipcidr",
-            url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
-            path: "./ruleset/custom/telegramcidr.yaml"
+            url: "https://raw.githubusercontent.com/GJKen/clash-Rules/refs/heads/main/Rules/ChatAI.yaml",
+            path: "./ruleset/custom/ChatAI.yaml"
         },
         pikpakdrive: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/GJKen/clash-Rules/refs/heads/main/Rules/PikPak.yaml",
             path: "./ruleset/custom/PikPak.yaml"
+        },
+        "Pic-Hub": {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/GJKen/clash-Rules/refs/heads/main/Rules/PicHub.yaml",
+            path: "./ruleset/custom/PicHub.yaml"
         },
         direct: {
             type: "http",
@@ -170,7 +169,7 @@ function overwriteRules(params) {
            type: "http",
            behavior: "classical",
            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt",
-           path: "./custom/applications.yaml",
+           path: "./ruleset/custom/applications.yaml",
            interval: 86400,
         }
     };
@@ -195,7 +194,6 @@ function overwriteProxyGroups(params) {
         { name: "JP-自动选择", regex: /日本|JP|Japan|🇯🇵/ },
         { name: "US-自动选择", regex: /美国|US|United States|America|🇺🇸/ },
         { name: "其它-自动选择", regex: /(?!.*(?:剩余|到期|主页|官网|游戏|关注))(.*)/ },
-        { name: "Google-自动选择", regex: /美国|US|United States|Japan|日本|JP|Singapore|新加坡|SG/ },
     ];
 
     const autoProxyGroups = autoProxyGroupRegexs
@@ -264,41 +262,38 @@ function overwriteProxyGroups(params) {
             name: "自定义代理组1",
             type: "select",
             proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            "include-all": true,
+            "include-all": true, // 这条是导入全部节点
             icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
+        },
+        {
+            name: "PicHub",
+            type: "select",
+            proxies: [proxyName, "手动选择", "自定义代理组1", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
+            icon: "https://cdn.img2ipfs.com/ipfs/Qmaf9aXDWpzVofE4fU17ch2bWYxqSZU8tXnZanBaE7PukN?filename=pixiv.svg"
         },
         {
             name: "PikPak",
             type: "select",
             proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://cdn.img2ipfs.com/ipfs/QmSu1K5Hqm5kuvtRypFnbwFEpfuzXuswQi18qmYJyVahpy"
         },
         {
             name: "ChatGPT",
             type: "select",
             proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
         },
         {
             name: "电报消息",
             type: "select",
             proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
             icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
-        },
-        {
-            name: "Google",
-            type: "select",
-            proxies: [proxyName, "手动选择", "Google-自动选择", "US-自动选择", "JP-自动选择", "SG-自动选择"],
-            icon: "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
         },
         {
             name: "应用程序代理",
             type: "select",
-            proxies: [proxyName, "手动选择", "HK-自动选择", "TW-自动选择", "SG-自动选择", "JP-自动选择", "US-自动选择", "其它-自动选择", "HK-手工选择", "TW-手工选择", "SG-手工选择", "JP-手工选择", "US-手工选择"],
-            // "include-all": true,
+            proxies: ["DIRECT", proxyName],
+            proxies: [proxyName, "DIRECT", "手动选择", "自动选择"],
             icon: "https://cdn.img2ipfs.com/ipfs/QmSryYFqXaSDUioMU7f4dHfhxPNfsokXsCZYsvga2bLtsn"
         },
         {
