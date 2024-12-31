@@ -1,8 +1,7 @@
 # NAME: Steam Doamin
 # AUTHOR: GJKen
 # SOURCE REPO: https://github.com/GJKen/clash-Rules
-# DATED: 2024-07-03 16:18:28
+# DATED: 2024-12-30
 payload:
-  - DOMAIN-SUFFIX,gemini.gptnb.xyz
   - DOMAIN-SUFFIX,steamserver.net,DIRECT
   - DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
