@@ -10,3 +10,6 @@ payload:
 
 // yande.re
   - DOMAIN-SUFFIX,yande.re
+
+// deviantart
+  - DOMAIN-SUFFIX,deviantart.com
