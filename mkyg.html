@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>折扣百分比计算v2</title>
+		<style>
+			body {min-width: 35%;width: 35%;margin:0 auto;box-shadow: 0 0 100px #50a8e726;line-height: 1.5;padding: 20px;}input,button {padding: 10px;margin: 5px;}.result {margin-top: 20px;}
+		</style>
+	</head>
+	<body>
+		<h1>折扣百分比计算v2</h1>
+		<label for="inputValue">输入消费值：</label>
+		<input type="number" id="inputValue" placeholder="输入一个值" />
+		<button onclick="calculate()">计算</button>
+		<div class="result" id="result"></div>
+
+		<script>
+			function calculate() {
+				const inputValue = parseFloat(document.getElementById('inputValue').value);
+
+				if (isNaN(inputValue)) {
+					document.getElementById('result').innerHTML = "请输入有效的数字！";
+					return;
+				}
+
+				// 计算过程和结果
+				const newCustomerDiscount = (inputValue * 0.45).toFixed(1);
+				const newCustomerPrice = (inputValue - newCustomerDiscount).toFixed(1);
+
+				const memberDiscount = (inputValue * 0.15).toFixed(1);
+
+				const teamLeaderBonus = (inputValue * 0.06).toFixed(1);
+				const teamLeaderBonusUp = (inputValue * 0.03).toFixed(1);
+
+				const regionalManagerBonus = (inputValue * 0.04).toFixed(1);
+				const regionalManagerBonusUp = (inputValue * 0.02).toFixed(1);
+
+				// 输出结果
+				const output = `
+				<p><strong>区域经理-团队管理奖</strong></p>
+				<p>${inputValue} * 4% = ${regionalManagerBonus}</p>
+                <p><strong>区域经理-平级奖(店长晋升区域经理)</strong></p>
+                <p>${inputValue} * 2% = ${regionalManagerBonusUp}</p>
+                <br>
+                <p><strong>店长-团队管理奖</strong></p>
+                <p>${inputValue} * 6% = ${teamLeaderBonus}</p>
+                <p><strong>店长-平级奖(会员晋升店长)</strong></p>
+                <p>${inputValue} * 3% = ${teamLeaderBonusUp}</p>
+                <br>
+				
+				<p><strong>新客-平级奖(顾客晋升会员)</strong></p>
+				<p>${inputValue} * 15% = ${memberDiscount}</p>
+				<p><strong>新客</strong></p>
+				<p>${inputValue} * 45% = ${newCustomerDiscount}</p>
+				<p>${inputValue} - ${newCustomerDiscount} = ${newCustomerPrice}</p>
+            `;
+
+				document.getElementById('result').innerHTML = output;
+			}
+		</script>
+	</body>
+</html>
