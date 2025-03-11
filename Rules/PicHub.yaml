@@ -13,3 +13,8 @@ payload:
 
 // deviantart
   - DOMAIN-SUFFIX,deviantart.com
+
+// Ex+EH+NH
+  - DOMAIN-KEYWORD,exhentai
+  - DOMAIN-KEYWORD,e-hentai
+  - DOMAIN-KEYWORD,nhentai
