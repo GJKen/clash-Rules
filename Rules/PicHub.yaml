@@ -1,20 +1,22 @@
 # 2025-03-11
 # Repo https://github.com/GJKen/clash-Rules/new/main/Rules/PicHub.yaml
 payload:
-// Pixiv
+# Pixiv+Fanbox
   - DOMAIN-KEYWORD,pximg.net
   - DOMAIN-KEYWORD,pixiv
+  - DOMAIN-SUFFIX,booth.pm
+  - DOMAIN-SUFFIX,fanbox.cc
 
-// Sankaku
+# Sankaku
   - DOMAIN-KEYWORD,sankakucomplex.com
 
-// yande.re
+# yande.re
   - DOMAIN-SUFFIX,yande.re
 
-// deviantart
+# deviantart
   - DOMAIN-SUFFIX,deviantart.com
 
-// Ex+EH+NH
+# Ex+EH+NH
   - DOMAIN-KEYWORD,exhentai
   - DOMAIN-KEYWORD,e-hentai
   - DOMAIN-KEYWORD,nhentai
