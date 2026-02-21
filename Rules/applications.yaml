@@ -1,3 +1,5 @@
+# REPO: https://github.com/GJKen/clash-Rules/new/main/Rules/Applications.yaml
+# UPDATED: 2026-02-22 05:16:25
 payload:
   - PROCESS-NAME,git-bash.exe
   - PROCESS-NAME,git-remote-https.exe

@@ -8,7 +8,12 @@ payload:
   - DOMAIN-KEYWORD,nhentai
   - DOMAIN-KEYWORD,e-hentai
   - DOMAIN-KEYWORD,exhentai
+  - DOMAIN-KEYWORD,kemono.cr
+  - DOMAIN-KEYWORD,yande.re
+  - DOMAIN-KEYWORD,baraag.net
+  - DOMAIN-KEYWORD,x.com
+  - DOMAIN-KEYWORD,rule34
+  - DOMAIN-KEYWORD,inkbunny
   - DOMAIN-SUFFIX,booth.pm
   - DOMAIN-SUFFIX,fanbox.cc
-  - DOMAIN-SUFFIX,yande.re
   - DOMAIN-SUFFIX,deviantart.com
