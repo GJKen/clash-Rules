@@ -6,6 +6,8 @@ payload:
   - DOMAIN-KEYWORD,pawoo
   - DOMAIN-KEYWORD,sankakucomplex.com
   - DOMAIN-KEYWORD,nhentai
+  - DOMAIN-KEYWORD,e-hentai
+  - DOMAIN-KEYWORD,exhentai
   - DOMAIN-SUFFIX,booth.pm
   - DOMAIN-SUFFIX,fanbox.cc
   - DOMAIN-SUFFIX,yande.re
