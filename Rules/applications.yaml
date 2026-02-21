@@ -1,3 +1,4 @@
 payload:
   - PROCESS-NAME,git-bash.exe
+  - PROCESS-NAME,git-remote-https.exe
   - PROCESS-NAME,aria2c.exe
