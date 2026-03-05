@@ -3,5 +3,14 @@
 # SOURCE REPO: https://github.com/GJKen/clash-Rules
 # DATED: 2024-12-30
 payload:
-  - DOMAIN-SUFFIX,steamserver.net,DIRECT
-  - DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
+  - PROCESS-NAME,steam.exe
+  - PROCESS-NAME,steamwebhelper.exe
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN-SUFFIX,steampowered.com
+  - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,
+  - DOMAIN-SUFFIX,
+  - DOMAIN-SUFFIX,
+  - DOMAIN-SUFFIX,
+  - DOMAIN-SUFFIX,cm.steampowered.com
