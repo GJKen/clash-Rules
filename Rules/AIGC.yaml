@@ -2,9 +2,8 @@
 # AUTHOR: aggregated by request
 # REPO: git@github.com:viewer12/OverseasAI.list.git
 # SOURCE: https://github.com/blackmatrix7/ios_rule_script (rule/Surge)
+# https://raw.githubusercontent.com/viewer12/OverseasAI.list/main/rule/Clash/OverseasAI/OverseasAI.list
 # INCLUDED-CORE: OpenAI, Claude, Anthropic, Gemini, BardAI, Copilot, Civitai, Stripe, PayPal
-# INCLUDED-UPSTREAM-EXTRA: see README
-# INCLUDED-CUSTOM: see README
 # UPDATED: 2026-03-05 04:02:20
 DOMAIN,ai.azure.com
 DOMAIN,ai.google.dev
