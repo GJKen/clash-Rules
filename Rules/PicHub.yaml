@@ -1,6 +1,7 @@
 # REPO: https://github.com/GJKen/clash-Rules/new/main/Rules/PicHub.yaml
 # UPDATED: 2026-02-22 03:02:25
 payload:
+#看图站点
   - DOMAIN-KEYWORD,pximg.net
   - DOMAIN-KEYWORD,pixiv
   - DOMAIN-KEYWORD,pawoo
@@ -17,3 +18,6 @@ payload:
   - DOMAIN-SUFFIX,booth.pm
   - DOMAIN-SUFFIX,fanbox.cc
   - DOMAIN-SUFFIX,deviantart.com
+#图床
+  - DOMAIN-SUFFIX,postimg.cc
+  - DOMAIN-SUFFIX,postimgs.org
