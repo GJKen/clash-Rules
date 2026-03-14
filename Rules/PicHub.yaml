@@ -17,6 +17,7 @@ payload:
   - DOMAIN-KEYWORD,inkbunny
   - DOMAIN-SUFFIX,booth.pm
   - DOMAIN-SUFFIX,fanbox.cc
+  - DOMAIN-KEYWORD,patreon
   - DOMAIN-SUFFIX,deviantart.com
 #图床
   - DOMAIN-SUFFIX,postimg.cc
