@@ -6,3 +6,4 @@ payload:
   - PROCESS-NAME,git-remote-https.exe
   - PROCESS-NAME,curl.exe
   - PROCESS-NAME,aria2c.exe
+  - PROCESS-NAME,Code.exe
