@@ -8,8 +8,6 @@
 payload:
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN,ai.azure.com
-  - DOMAIN,ai.google.dev
-  - DOMAIN,alkalimakersuite-pa.clients6.google.com
   - DOMAIN,api.cloudflare.com
   - DOMAIN,api.githubcopilot.com
   - DOMAIN,api.jetbrains.ai
@@ -32,13 +30,11 @@ payload:
   - DOMAIN,gateway.ai.cloudflare.com
   - DOMAIN,gateway.bingviz.microsoft.net
   - DOMAIN,gateway.bingviz.microsoftapp.net
-  - DOMAIN,generativelanguage.googleapis.com
   - DOMAIN,idetoolkits-hostedfiles.amazonaws.com
   - DOMAIN,idetoolkits.amazonwebservices.com
   - DOMAIN,in.appcenter.ms
   - DOMAIN,integrate.api.nvidia.com
   - DOMAIN,location.microsoft.com
-  - DOMAIN,makersuite.google.com
   - DOMAIN,odc.officeapps.live.com
   - DOMAIN,openai-api.arkoselabs.com
   - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
@@ -63,7 +59,6 @@ payload:
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,ai21.com
   - DOMAIN-SUFFIX,ai21labs.com
-  - DOMAIN-SUFFIX,aiplatform.googleapis.com
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,ampcode.ai
   - DOMAIN-SUFFIX,ampcode.com
@@ -74,13 +69,11 @@ payload:
   - DOMAIN-SUFFIX,api.microsoftapp.net
   - DOMAIN-SUFFIX,api.nvidia.com
   - DOMAIN-SUFFIX,api.statsig.com
-  - DOMAIN-SUFFIX,apis.google.com
   - DOMAIN-SUFFIX,artbreeder.com
   - DOMAIN-SUFFIX,augment.dev
   - DOMAIN-SUFFIX,augmentcode.com
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,azuredatabricks.net
-  - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN-SUFFIX,beibao.cn
   - DOMAIN-SUFFIX,beibao.com
   - DOMAIN-SUFFIX,beibao.com.cn
@@ -100,7 +93,6 @@ payload:
   - DOMAIN-SUFFIX,braintreeps.com
   - DOMAIN-SUFFIX,briantreepayments.net
   - DOMAIN-SUFFIX,briantreepayments.tv
-  - DOMAIN-SUFFIX,business.gemini.google
   - DOMAIN-SUFFIX,buyfast-paysmart.net
   - DOMAIN-SUFFIX,card.io
   - DOMAIN-SUFFIX,cash2.com
@@ -129,7 +121,6 @@ payload:
   - DOMAIN-SUFFIX,cursor.sh
   - DOMAIN-SUFFIX,deepinfra.com
   - DOMAIN-SUFFIX,deepmind.com
-  - DOMAIN-SUFFIX,deepmind.google
   - DOMAIN-SUFFIX,descript.com
   - DOMAIN-SUFFIX,devtools-paypal.com
   - DOMAIN-SUFFIX,diabrowser.ai
@@ -150,13 +141,9 @@ payload:
   - DOMAIN-SUFFIX,fireworks.ai
   - DOMAIN-SUFFIX,fundpaypal.com
   - DOMAIN-SUFFIX,gcp.databricks.com
-  - DOMAIN-SUFFIX,gemini.google
-  - DOMAIN-SUFFIX,gemini.google.com
-  - DOMAIN-SUFFIX,generativeai.google
   - DOMAIN-SUFFIX,getbraintree.com
   - DOMAIN-SUFFIX,githubcopilot.com
   - DOMAIN-SUFFIX,gmoney.org
-  - DOMAIN-SUFFIX,google.com
   - DOMAIN-SUFFIX,grammarly.com
   - DOMAIN-SUFFIX,grep.app
   - DOMAIN-SUFFIX,grok.com
@@ -393,7 +380,6 @@ payload:
   - DOMAIN-SUFFIX,ppaypal.com
   - DOMAIN-SUFFIX,pplx.ai
   - DOMAIN-SUFFIX,pppds.com
-  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
   - DOMAIN-SUFFIX,pypl.com
   - DOMAIN-SUFFIX,pypl.info
   - DOMAIN-SUFFIX,pypl.net
