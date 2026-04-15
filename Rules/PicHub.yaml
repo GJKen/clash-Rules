@@ -23,3 +23,6 @@ payload:
 #图床
   - DOMAIN-SUFFIX,postimg.cc
   - DOMAIN-SUFFIX,postimgs.org
+#搜图
+  - DOMAIN-KEYWORD,ascii2d
+  - DOMAIN-KEYWORD,saucenao
