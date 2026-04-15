@@ -31,6 +31,7 @@ payload:
   - IP-CIDR6,2001:b28:f23f::/48,no-resolve
   - IP-CIDR6,2a0a:f280::/29,no-resolve
   - PROCESS-NAME,Telegram.exe
+  - PROCESS-NAME,AyuGram.exe
   - PROCESS-NAME,nekox.messenger
   - PROCESS-NAME,org.telegram.messenger
   - PROCESS-NAME,telegram-desktop
