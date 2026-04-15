@@ -198,7 +198,7 @@ function main(config) {
     telegram: {
       url: "https://fastly.jsdelivr.net/gh/GJKen/clash-Rules@master/Rules/Telegram.yaml",
       path: "./ruleset/telegram_local.yaml",
-      behavior: "ipcidr",
+      behavior: "classical",
       interval: 86400,
       format: "yaml",
       type: "http",
@@ -275,11 +275,11 @@ function main(config) {
     // 这里是顺序匹配,如果匹配到规则则停止下一个匹配
     "RULE-SET,private,DIRECT",
     "RULE-SET,applications,应用程序代理",
+    "RULE-SET,adobe,Adobe",
     "RULE-SET,pic_hub,PicHub",
     "RULE-SET,steam,PROXY",
-    "RULE-SET,adobe,Adobe",
-    "RULE-SET,claude,AIGC",
     "RULE-SET,google,Google",
+    "RULE-SET,claude,AIGC",
     "RULE-SET,ai_GC,AIGC",
     "RULE-SET,pikpakdomain,PikPak",
     "RULE-SET,telegram,Telegram",
