@@ -6,7 +6,7 @@ payload:
   - DOMAIN-KEYWORD,pixiv
   - DOMAIN-KEYWORD,pawoo
   - DOMAIN-KEYWORD,sankakucomplex.com
-  - DOMAIN-KEYWORD,nhentai
+  - DOMAIN-KEYWORD,nhentai.net
   - DOMAIN-KEYWORD,e-hentai
   - DOMAIN-KEYWORD,exhentai
   - DOMAIN-KEYWORD,kemono.cr
@@ -26,3 +26,4 @@ payload:
 #搜图
   - DOMAIN-KEYWORD,ascii2d
   - DOMAIN-KEYWORD,saucenao
+  - DOMAIN-KEYWORD,iqdb.org

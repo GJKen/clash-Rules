@@ -1,7 +1,6 @@
 # NAME: Claude
 # UPDATED: 2026-04-12 09:20:01
 payload:
-  - DOMAIN,cdn.usefathom.com
+  - DOMAIN-KEYWORD,claude
   - DOMAIN-SUFFIX,anthropic.com
-  - DOMAIN-SUFFIX,claude.ai
-  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN,cdn.usefathom.com
