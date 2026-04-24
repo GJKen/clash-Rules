@@ -27,3 +27,5 @@ payload:
   - DOMAIN-KEYWORD,ascii2d
   - DOMAIN-KEYWORD,saucenao
   - DOMAIN-KEYWORD,iqdb.org
+#其它图相关
+  - DOMAIN-KEYWORD,nekorindosp
