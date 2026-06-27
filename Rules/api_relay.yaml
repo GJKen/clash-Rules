@@ -1,0 +1,9 @@
+# REPO: https://github.com/GJKen/clash-Rules/new/main/Rules/api_relay.yaml
+# UPDATED: 2026-06-28
+payload:
+  - DOMAIN-KEYWORD,huaibao.top
+  - DOMAIN-KEYWORD,vsllm.com
+  - DOMAIN-KEYWORD,unity2.ai
+  - DOMAIN-KEYWORD,sourcesdata.com
+  - DOMAIN-KEYWORD,anyrouter.top
+  - DOMAIN-KEYWORD,shengqainbang.cn

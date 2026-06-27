@@ -1,0 +1,7 @@
+# REPO: https://github.com/GJKen/clash-Rules/new/main/Rules/DownloadWEB.yaml
+# UPDATED: 2026-06-28
+payload:
+#文件下载站点
+  - DOMAIN-KEYWORD,frdl
+  - DOMAIN-KEYWORD,fuckingfast.net
+  - DOMAIN-KEYWORD,rapidgator.net
