@@ -1,4 +1,4 @@
 # 2024-12-31
-# Repo https://github.com/GJKen/clash-Rules
+# Repo https://github.com/GJKen/clash-Rules/blob/main/Rules/Adobe.yaml
 payload:
   - DOMAIN-KEYWORD,adobe

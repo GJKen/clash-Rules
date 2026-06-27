@@ -1,4 +1,4 @@
-# REPO: https://github.com/GJKen/clash-Rules/new/main/Rules/Applications.yaml
+# REPO: https://github.com/GJKen/clash-Rules/blob/main/Rules/applications.yaml
 # UPDATED: 2026-02-22 05:16:25
 payload:
   - PROCESS-NAME,git.exe
